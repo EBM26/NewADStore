@@ -5,14 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 	<title>AirDoctor home indoor purifier for allergy, smoke & germs | Store</title>
 <!-- 	<link rel="stylesheet" href="css/style.css">
  -->	<style>
-		*{text-decoration: none; margin: 0; padding: 0;}
-		html,body{margin: 0; padding: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #191919;}
+		*{text-decoration: none; margin: 0; padding: 0; max-width: 100%;}
+		html,body{margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; color: #000000; font-size: 16px;}
 		img{border: none;}
 		li{list-style-type: none;}
-		div{display: block; margin: 0; padding: 0;}
+		div{display: block; margin: 0; padding: 0; box-sizing: border-box;}
 		u{text-decoration: underline;}
 		s{text-decoration: line-through;}
 		i{font-style: italic;}
@@ -34,20 +35,62 @@
 		.hidden{display: none;}
 		.font12{font-size: 12px;}
 		.font14{font-size: 14px;}
-		.font20{font-size: 20px;}
+		.font20{font-size: 20px !important;}
 		.font22{font-size: 22px;}
 		.font24{font-size: 24px;}
 		.font16{font-size: 16px;}
-		.font18{font-size: 18px;}
+		.font18{font-size: 18px !important;;}
 		.font26{font-size: 26px;}
 		.font28{font-size: 28px;}
 		.font36{font-size: 36px;}
+		.contPad{padding: 60px 15px;}
+		.marbot60{margin-bottom: 60px;}
+		.weightNormal{font-weight: normal !important;}
+		.marright30{margin-right: 30px;}
+
+		.productDiv{border: 1px solid #004E80; margin-bottom: 30px;}
+		.titleDiv{background: #F8F8F8;  padding: 15px 25px;}
+		.titleDiv p{color: #004E80; font-weight: bold; font-size: 28px;}
+		.downTriangle{width: 0; height: 0; border-left: 150px solid transparent; border-right: 865px solid transparent; 
+						  border-top: 15px solid #F8F8F8; margin-bottom: 20px;}
+		.unitDiv{flex: 1; padding: 5px 25px 15px;}
+		.smallIMG{max-width: 90px; padding: 15px; border: 1px solid #004E80; margin-bottom: 15px; height: 100px; display: flex;
+				  align-items: center; cursor: pointer;}
+		.bigIMGDiv{display: flex; align-items: baseline; padding-left: 45px; margin-top: -15px; max-width: 365px;}
+		.onlyDiv{border: 2px solid #F3F3F3; padding: 10px 15px; margin-top: 20px;}
+		.onlyDiv p{display: inline-block; font-size: 23px; font-weight: bold; margin-left: 10px;}
+		.onlyDiv img{vertical-align: 2px; width: 15px;}
+		.grayOnly{border: 0; background: #F3F3F3; margin-top: 0;}
+		.grayOnly p{font-size: 20px;}
+		.quantityDiv{margin: 20px 0;}
+		.quantityDiv label{margin-right: 10px; display: inline-block;}
+		.quantityDiv select{width: 82%; border: 1px solid; height: 30px;}
+
+		.descText{font-size: 18px; text-align: left;}
+		.retail{color: #444546; font-size: 22px; margin: 20px 0; font-weight: bold;}
+		.titlePur{background: #004E80; color: #ffffff; text-align: center; font-size: 20px; padding: 10px 0;}
+		.downBlueTri{width: 0; height: 0; border-left: 150px solid transparent; border-right: 150px solid transparent; 
+						  border-top: 10px solid #004E80; margin: auto; margin-bottom: -10px; position: relative; z-index: 10;}
+		.purOption .onlyDiv{margin: 0;}
+		.addToCart{border: 1px solid #01588B; padding: 10px 15px; font-size: 18px; color: #004E80; font-weight: bold;}
+		.addToCart p{display: inline-block; vertical-align: middle;}
+		.circle{border: 2px solid #004E80; width: 25px; height: 25px; margin-right: 5px; display: inline-block; vertical-align: middle;
+				border-radius: 50%; cursor: pointer;}
+		.comboDiv{max-width: 450px;}
+		.quantityDiv .width73{width: 73%;}
+		.titlePurGray{color: #444546; background: #F8F8F8;}
+		.downBlueGray{border-top: 10px solid #F8F8F8;}
+		.purOption .lastOnly{height: 47px; margin-bottom: 70px;}
+
+		.pad020{padding: 0 20px 15px;}
+		.downTSmall{border-left: 70px solid transparent; border-right: 360px solid transparent;}
+		.heppaFilter{max-width: 200px;}
+		.heppaCart{margin-top: 41px;}
 
 		/* ipad and mobile styling rules */
 		@media only screen and (max-width: 1099px) {
 			.container{width: auto;}
-			.row{padding: 0 10px;}
-			.flex-container, .desktopHide{display: block;}
+			.desktopHide{display: block;}
 			.Fright, .Fleft{float: none;}
 			
 		}
@@ -67,15 +110,201 @@
 		<![endif]-->
 	</head>
 	<body>
+		<!-- <div id="fb-root"></div>
+		<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 		<header>
 			<div class="container">
-				
+				<div class="topHeader">
+				<div class="clear"></div>
+				</div>
+				<div class="right" style="margin: 0px 20px 0px 20px; font-size: 15px"><div class="fb-like" data-href="https://www.facebook.com/airdoctorpro/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div></div>
 			</div>
-		</header>
-		<div class="container">
-			
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script></script>
+		</header>-->
+		<div class="container contPad">
+			<h1 class="font36 bold center marbot60">AirDoctor Store</h1>
+			<div class="productDiv">
+				<div class="titleDiv">
+					<p>AirDoctor</p>
+				</div>
+				<div class="downTriangle"></div>
+				<div class="flex-container">
+					<div class="unitDiv flex-container">
+						<div class="thumbDiv">
+							<div class="smallIMG">
+								<img src="images/ADFront.png" alt="">
+							</div>
+							<div class="smallIMG">
+								<img src="images/ADSide.png" alt="">
+							</div>
+							<div class="smallIMG">
+								<img src="images/ADback.png" alt="">
+							</div>
+							<div class="smallIMG">
+								<img src="images/ADTop.png" alt="">
+							</div>
+						</div>
+						<div class="bigIMGDiv">
+							<img src="images/ADFront.png" alt="" class="bigImage">
+						</div>
+					</div>
+					<div class="unitDiv">
+						<p class="font18">AirDoctor combines our UltraHEPA™ filter with our proprietary dual action Carbon/Gas Trap/VOC filter to remove or substantially reduce virtually all the particles, toxic ozone, volatile organic chemicals (VOCs) and gases from the air in your home. <br><br>AirDoctor features professional WhisperJet fans, which are 30% quieter than ordinary air purifiers, and features a built-in air quality monitor which lets you know if your indoor air quality is good, moderate or poor and automatically adjusts the level of filtration based on the air quality in the room.</p>
+						<div class="onlyDiv">
+							<img src="images/blueCheck.png" alt=""> <p>ONLY $629.00</p>
+						</div>
+						<div class="onlyDiv grayOnly">
+							<img src="images/blueCheck.png" alt=""> <p>+ $29.95 S&P</p>
+						</div>
+						<div class="quantityDiv">
+							<label for="">Quantity</label> 
+							<select name="" id=""> 
+								<option value="" selected="true">0</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div> <!-- productDiv -->
+			<div class="productDiv">
+				<div class="titleDiv">
+					<p>One Year Combo Pack</p>
+				</div>
+				<div class="downTriangle"></div>
+				<div class="flex-container">
+					<div class="unitDiv center comboDiv">
+						<img src="images/OneYearCombo.png" alt="">
+						<p class="retail">$180.00 retail value</p>
+						<p class="descText">One-year combo pack includes one (1) UltraHEPA™ filter and two (2) Carbon/Gas Trap/VOC filters.</p>
+					</div>
+					<div class="unitDiv flex-container">
+						<div class="flex1 marright30">
+							<div class="purOption">
+								<div class="titlePur">
+									<p>AUTOSHIP &amp; SAVE</p>
+								</div>
+								<div class="downBlueTri"></div>
+								<div class="onlyDiv">
+									<img src="images/blueCheck.png" alt=""> <p>$132.00</p>
+								</div>
+								<div class="onlyDiv grayOnly">
+									<img src="images/blueCheck.png" alt=""> <p>FREE S&amp;P</p>
+								</div>
+								<div class="onlyDiv">
+									<img src="images/blueCheck.png" alt=""> <p class="font18 weightNormal">Savings of $58</p>
+								</div>
+								<div class="onlyDiv grayOnly">
+									<img src="images/blueCheck.png" alt=""> <p class="font18 weightNormal">Delivers Annually</p>
+								</div>
+								<div class="onlyDiv">
+									<img src="images/blueCheck.png" alt=""> <p class="font18 weightNormal">Cancel anytime</p>
+								</div>
+							</div>
+							<div class="quantityDiv">
+							<label for="">Quantity</label> 
+							<select name="" id="" class="width73"> 
+								<option value="" selected="true">0</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+							</div>
+							<div class="addToCart">
+								<div class="circle"></div> <p>ADD TO CART</p>
+							</div>
+						</div> <!-- flex1 -->
+						<div class="flex1">
+							<div class="purOption">
+								<div class="titlePur titlePurGray">
+									<p>ONE-TIME PURCHASE</p>
+								</div>
+								<div class="downBlueTri downBlueGray"></div>
+								<div class="onlyDiv">
+									<img src="images/blueCheck.png" alt=""> <p>$144.95</p>
+								</div>
+								<div class="onlyDiv grayOnly">
+									<img src="images/blueCheck.png" alt=""> <p>$9.95 S&amp;P</p>
+								</div>
+								<div class="onlyDiv">
+									<img src="images/blueCheck.png" alt=""> <p class="font18 weightNormal">Savings of $35</p>
+								</div>
+								<div class="onlyDiv grayOnly">
+									<img src="images/blueCheck.png" alt=""> <p class="font18 weightNormal">One-time Delivery</p>
+								</div>
+								<div class="onlyDiv lastOnly">
+									
+								</div>
+							</div>
+							<div class="addToCart">
+								<div class="circle"></div> <p>ADD TO CART</p>
+							</div>
+						</div> <!-- flex1 -->
+					</div>
+				</div>
+			</div> <!-- productDiv -->
+			<div class="flex-container">
+				<div class="productDiv flex1 marright30">
+					<div class="titleDiv">
+					<p>AirDoctor Replacement Filters - Two Year Combo Pack</p>
+				</div>
+				<div class="downTriangle downTSmall"></div>
+				 <div class="pad020">
+					<div class="center">
+						<img src="images/TwoYearCombo.png" alt="">
+					</div>
+					<p>Two-year combo pack includes two (2) UltraHEPA™ filters and four (4) Carbon/Gas Trap/VOC filters.</p>
+					<div class="onlyDiv">
+						<img src="images/blueCheck.png" alt=""> <p>$284.95</p>
+					</div>
+					<div class="onlyDiv grayOnly">
+						<img src="images/blueCheck.png" alt=""> <p>$9.95 S&amp;P</p>
+					</div>
+					<div class="quantityDiv">
+							<label for="">Quantity</label> 
+							<select name="" id=""> 
+								<option value="" selected="true">0</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+					</div>
+					<div class="addToCart heppaCart">
+						<div class="circle"></div> <p>ADD TO CART</p>
+					</div>
+				</div>
+				</div> <!-- productDiv -->
+				<div class="productDiv flex1">
+					<div class="titleDiv">
+					<p>AirDoctor UltraHEPA™ Replacement Filter</p>
+				</div>
+				<div class="downTriangle downTSmall"></div>
+				 <div class="pad020">
+					<div class="center">
+						<img src="images/heppaFilter.png" alt="" class="heppaFilter">
+					</div>
+					<p>AirDoctor UltraHEPA™ filters lasts for one year (under normal use) and are designed to capture ultra-fine PM 2.5 particles from the air. That is 100 times smaller than regular HEPA filters.</p>
+					<div class="onlyDiv">
+						<img src="images/blueCheck.png" alt=""> <p>$59.95</p>
+					</div>
+					<div class="onlyDiv grayOnly">
+						<img src="images/blueCheck.png" alt=""> <p>$9.95 S&amp;P</p>
+					</div>
+					<div class="quantityDiv">
+							<label for="">Quantity</label> 
+							<select name="" id=""> 
+								<option value="" selected="true">0</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+					</div>
+					<div class="addToCart">
+						<div class="circle"></div> <p>ADD TO CART</p>
+					</div>
+				</div>
+				</div> <!-- productDiv -->
+			</div> <!-- flex-container -->
+		</div> <!-- container -->
 	</body>
 	</html>
