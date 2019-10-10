@@ -14,17 +14,19 @@
 		img{border: none;}
 		li{list-style-type: none;}
 		div{display: block; margin: 0; padding: 0; box-sizing: border-box;}
+		input:focus, select:focus, textarea:focus, button:focus{outline: none;}
 		u{text-decoration: underline;}
 		s{text-decoration: line-through;}
 		i{font-style: italic;}
-		b{font-weight: bold;}
+		b, .bold{font-weight: bold;}
 		a:link, a:visited, a:active{text-decoration: none; color: inherit;}
 		.Fright, .constantFright{float: right;}
 		.Fleft, .constantFleft{float: left;}
 		.clear{clear: both;}
-		.container{width: 1100px; margin: auto;}
+		.container{width: 1100px; margin: auto; }
 		.row{padding: 0 40px;}
 		.flex-container{display: flex;}
+		.Constantflex{display: flex;}
 		.flex1{flex: 1;}
 		.align-left{text-align: left;}
 		.inline{display: inline;}
@@ -43,12 +45,15 @@
 		.font26{font-size: 26px;}
 		.font28{font-size: 28px;}
 		.font36{font-size: 36px;}
-		.contPad{padding: 60px 15px;}
+		.contPad{padding: 80px 15px;}
 		.marbot60{margin-bottom: 60px;}
+		.marbot30{margin-bottom: 30px;}
+		.marbot20{margin-bottom: 20px;}
 		.weightNormal{font-weight: normal !important;}
 		.marright30{margin-right: 30px;}
+		.sectionHr{border: 0; border-bottom: 1px solid #979797; width: 100%;}
 
-		.productDiv{border: 1px solid #004E80; margin-bottom: 30px;}
+		.productDiv{border: 1px solid #004E80;}
 		.titleDiv{background: #F8F8F8;  padding: 15px 25px;}
 		.titleDiv p{color: #004E80; font-weight: bold; font-size: 28px;}
 		.downTriangle{width: 0; height: 0; border-left: 150px solid transparent; border-right: 865px solid transparent; 
@@ -76,6 +81,8 @@
 		.addToCart p{display: inline-block; vertical-align: middle;}
 		.circle{border: 2px solid #004E80; width: 25px; height: 25px; margin-right: 5px; display: inline-block; vertical-align: middle;
 				border-radius: 50%; cursor: pointer;}
+		.innerCircle{background: #004E80; width: 17px; height: 17px; display: inline-block; border-radius: 50%; 
+					 margin-left: 2px; margin-top: 2px;}
 		.comboDiv{max-width: 450px;}
 		.quantityDiv .width73{width: 73%;}
 		.titlePurGray{color: #444546; background: #F8F8F8;}
@@ -87,6 +94,34 @@
 		.heppaFilter{max-width: 200px;}
 		.heppaCart{margin-top: 41px;}
 		.martop12{margin-top: 12px;}
+		.max525{max-width: 525px;}
+		.carbonCart{margin-top: 38px;}
+		.compactFilter{max-width: 140px;}
+
+		/* #orderBillingSection styling rules */
+		.summaryDiv{max-width: 570px; margin: auto; margin-bottom: 20px;}
+		.summaryTitle{background: #F8F8F8; text-align: center; padding: 20px 0; font-size: 28px; font-weight: bold;}
+		.summaryRow{display: flex; border: 2px solid #F8F8F8; font-weight: bold; font-size: 20px;}
+		.summaryRowMiddle{border-top: 0; border-bottom: 0;}
+		.summaryLeft{flex: 2; padding: 10px; border-right: 2px solid #F8F8F8;}
+		.summaryRight{flex: 1; padding: 10px; text-align: right;}
+		.contPadSmall{padding: 40px 15px;}
+		.CanadianShipping{font-size: 22px; max-width: 770px; margin: 40px auto 20px;}
+		.darkBlue{color: #004E80; font-weight: bold;}
+		#infoSection{display: flex;}
+		.formTitle{color: #555555; margin-bottom: 3px;}
+		input, .formSelect{border: 1px solid #000000; padding: 5px 10px; font-size: 20px; width: 90%; margin-bottom: 20px;}
+		.box{height: 25px; width: 25px; border: 2px solid #004E80; float: left; margin-right: 10px;}
+		.sign{color: #004E80; font-size: 18px; font-weight: bold; float: right; max-width: 90%;}
+		.smallInputRight{margin-right: 20px;}
+		.formSelect{height: 35px;}
+		.leftInfo{flex: 1; margin-right: 20px;}
+		.rightInfo{flex: 2; display: flex;}
+		.postalWidth{width: 80%;}
+		#shippingSelect{margin-top: 25px;}
+		#otherAddress{display: none;}
+		.ccGroup{max-width: 330px; margin-bottom: 10px;}
+		.formPay{display: inline-block; color: #004E80; font-size: 18px; font-weight: bold; vertical-align: middle;}
 
 		/* ipad and mobile styling rules */
 		@media only screen and (max-width: 1099px) {
@@ -111,16 +146,6 @@
 		<![endif]-->
 	</head>
 	<body>
-		<!-- <div id="fb-root"></div>
-		<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-		<header>
-			<div class="container">
-				<div class="topHeader">
-				<div class="clear"></div>
-				</div>
-				<div class="right" style="margin: 0px 20px 0px 20px; font-size: 15px"><div class="fb-like" data-href="https://www.facebook.com/airdoctorpro/" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div></div>
-			</div>
-		</header>-->
 		<div class="container contPad">
 			<h1 class="font36 bold center marbot60">AirDoctor Store</h1>
 			<div class="productDiv">
@@ -131,16 +156,16 @@
 				<div class="flex-container">
 					<div class="unitDiv flex-container">
 						<div class="thumbDiv">
-							<div class="smallIMG">
+							<div class="smallIMG smallPic1">
 								<img src="images/ADFront.png" alt="">
 							</div>
-							<div class="smallIMG">
+							<div class="smallIMG smallPic2">
 								<img src="images/ADSide.png" alt="">
 							</div>
-							<div class="smallIMG">
+							<div class="smallIMG smallPic3">
 								<img src="images/ADback.png" alt="">
 							</div>
-							<div class="smallIMG">
+							<div class="smallIMG smallPic4">
 								<img src="images/ADTop.png" alt="">
 							</div>
 						</div>
@@ -165,10 +190,17 @@
 								<option value="">3</option>
 							</select>
 						</div>
+						<div class="addToCart">
+						    <div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
+						</div>
 					</div>
 				</div>
 			</div> <!-- productDiv -->
-			<div class="productDiv">
+			</div> <!-- container -->
+			<hr class="sectionHr">
+			<div class="container contPad">
+			<h2 class="font36 bold center marbot60">AirDoctor Classic Filters</h2>
+			<div class="productDiv marbot30">
 				<div class="titleDiv">
 					<p>One Year Combo Pack</p>
 				</div>
@@ -212,7 +244,7 @@
 							</select>
 							</div>
 							<div class="addToCart">
-								<div class="circle"></div> <p>ADD TO CART</p>
+								<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
 							</div>
 						</div> <!-- flex1 -->
 						<div class="flex1">
@@ -238,7 +270,7 @@
 								</div>
 							</div>
 							<div class="addToCart">
-								<div class="circle"></div> <p>ADD TO CART</p>
+								<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
 							</div>
 						</div> <!-- flex1 -->
 					</div>
@@ -270,8 +302,8 @@
 								<option value="">3</option>
 							</select>
 					</div>
-					<div class="addToCart heppaCart">
-						<div class="circle"></div> <p>ADD TO CART</p>
+					<div class="addToCart">
+						<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
 					</div>
 				</div>
 				</div> <!-- productDiv -->
@@ -301,11 +333,14 @@
 							</select>
 					</div>
 					<div class="addToCart">
-						<div class="circle"></div> <p>ADD TO CART</p>
+						<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
 					</div>
 				</div>
 				</div> <!-- productDiv -->
-			</div> <!-- flex-container -->
+				</div> <!-- flex-container -->
+			</div> <!-- container -->
+			<hr class="sectionHr">
+			<div class="container contPad">
 			<div class="flex-container">
 				<div class="productDiv flex1 marright30">
 					<div class="titleDiv">
@@ -332,8 +367,8 @@
 								<option value="">3</option>
 							</select>
 					</div>
-					<div class="addToCart heppaCart">
-						<div class="circle"></div> <p>ADD TO CART</p>
+					<div class="addToCart">
+						<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
 					</div>
 				</div>
 				</div> <!-- productDiv -->
@@ -362,12 +397,206 @@
 								<option value="">3</option>
 							</select>
 					</div>
-					<div class="addToCart">
-						<div class="circle"></div> <p>ADD TO CART</p>
+					<div class="addToCart carbonCart">
+						<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
 					</div>
 				</div>
 				</div> <!-- productDiv -->
 			</div> <!-- flex-container -->
 		</div> <!-- container -->
+		<hr class="sectionHr">
+		<div class="container contPadSmall">
+			<h2 class="font36 bold center marbot60">AirDoctor Compact Filters</h2>
+				<div class="productDiv max525">
+					<div class="titleDiv">
+					<p>AirDoctor Compact Filter Set</p>
+				</div>
+				<div class="downTriangle downTSmall"></div>
+				 <div class="pad020">
+					<div class="center">
+						<img src="images/compactFilter.png" alt="" class="compactFilter">
+					</div>
+					<p class="martop12">AirDoctor Compact's UltraHEPA filter and Carbon Gas Trap/VOC filter need to replaced at the same time--just once every 6 months. Purchase an extra set of filters now and no need to think about re-ordering any filters for 1 full year!<br><br>What's included:<br><br>1 UltraHEPA filter, which captures 100% of airborne particles at .003 microns. This includes contaminants like dust, pollen, mold spores, cigarette smoke, pet hair, and dander, bacteria and viruses.<br><br>1 Carbon Gas Trap/VOC filter that reduces toxic gasses known as volatile organic compounds (VOCs) from the air that come from cleaning products, paint, and off-gassing from flooring, furniture & building materials.</p>
+					<div class="onlyDiv">
+						<img src="images/blueCheck.png" alt=""> <p>$759.95</p>
+					</div>
+					<div class="onlyDiv grayOnly">
+						<img src="images/blueCheck.png" alt=""> <p>$9.95 S&amp;P</p>
+					</div>
+					<div class="quantityDiv">
+							<label for="">Quantity</label> 
+							<select name="" id=""> 
+								<option value="" selected="true">0</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+					</div>
+					<div class="addToCart heppaCart">
+						<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
+					</div>
+				</div>
+				</div> <!-- productDiv -->
+		</div> <!-- container -->
+
+		<div id="orderBillingSection">
+			<div class="container contPad">
+				<div class="summaryDiv">
+					<div class="summaryTitle">Order Summary</div>
+					<div class="summaryRow">
+						<div class="summaryLeft">Products Value:</div>
+						<div class="summaryRight">$0.00</div>
+					</div> 
+					<div class="summaryRow summaryRowMiddle">
+						<div class="summaryLeft">Shipping &amp; Processing:</div>
+						<div class="summaryRight">$0.00</div>
+					</div>
+					<div class="summaryRow">
+						<div class="summaryLeft">Order Value:</div>
+						<div class="summaryRight">$0.00</div>
+					</div>
+				</div>
+				<p class="center font22"><b>Note:</b> <i>Taxes will be added for California and Canada residents</i></p>
+				<p class="CanadianShipping">U.S. and Canadian orders only. Canadian customers <span class="darkBlue">click here</span> - All orders shipped via USPS. Sales tax will be charged where applicable.</p>
+
+				<div id="infoSection">
+					<div class="leftInfo">
+						<p class="font28 bold marbot20">Billing Address</p>
+						<p class="formTitle">Email</p>
+						<input type="text">
+						<p class="formTitle">First Name</p>
+						<input type="text">
+						<p class="formTitle">Last Name</p>
+						<input type="text">
+						<div class="marbot20">
+							<div class="box"></div>
+							<p class="sign">Yes, sign me up to receive news about sales &amp; offers! Read our privacy policy.</p>
+							<div class="clear"></div>
+						</div>
+						<p class="formTitle">Phone</p>
+						<input type="text">
+						<p class="formTitle">Street Address</p>
+						<input type="text">
+						<p class="formTitle">Apt/Suite</p>
+						<input type="text">
+						<p class="formTitle">City</p>
+						<input type="text">
+						<div class="Constantflex">
+							<div class="flex1 smallInputRight">
+								<p class="formTitle">State</p>
+								<select name="" id="" class="formSelect"></select>
+							</div>
+							<div class="flex1">
+								<p class="formTitle">Postal Code</p>
+								<input type="text" class="postalWidth">
+							</div>
+						</div>
+					</div>
+					<div class="rightInfo">
+						<div class="flex1">
+							<p class="font28 bold marbot20">Shipping Address</p>
+						<select name="" id="shippingSelect" class="formSelect">
+							<option value="same">Same as Billing</option>
+							<option value="other">Other Address</option>
+						</select>
+							<div id="otherAddress">
+								<p class="formTitle">Email</p>
+								<input type="text">
+								<p class="formTitle">First Name</p>
+								<input type="text">
+								<p class="formTitle">Last Name</p>
+								<input type="text">
+								<p class="formTitle">Phone</p>
+								<input type="text">
+								<p class="formTitle">Street Address</p>
+								<input type="text">
+								<p class="formTitle">Apt/Suite</p>
+								<input type="text">
+								<p class="formTitle">City</p>
+								<input type="text">
+								<div class="Constantflex">
+									<div class="flex1 smallInputRight">
+										<p class="formTitle">State</p>
+										<select name="" id="" class="formSelect"></select>
+									</div>
+									<div class="flex1">
+										<p class="formTitle">Postal Code</p>
+										<input type="text" class="postalWidth">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex1">
+							<p class="font28 bold marbot20">Payment Information</p>
+								<p class="formTitle">Discount Code</p>
+								<input type="text">
+								<img src="images/ccGroup.png" alt="" class="ccGroup">
+								<div class="marbot30">
+									<div class="circle"> <div class="innerCircle"></div> </div> <p class="formPay">PAY BY CREDIT CARD</p>
+								</div>
+								<p class="formTitle">Last Name</p>
+								<input type="text">
+								<p class="formTitle">Phone</p>
+								<input type="text">
+								<p class="formTitle">Street Address</p>
+								<input type="text">
+								<p class="formTitle">Apt/Suite</p>
+								<input type="text">
+								<p class="formTitle">City</p>
+								<input type="text">
+								<div class="Constantflex">
+									<div class="flex1 smallInputRight">
+										<p class="formTitle">State</p>
+										<select name="" id="" class="formSelect"></select>
+									</div>
+									<div class="flex1">
+										<p class="formTitle">Postal Code</p>
+										<input type="text" class="postalWidth">
+									</div>
+								</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- container -->
+		</div> <!-- orderBillingSection -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// clicking different images and switching images
+				$(".smallPic1").click(function() {
+					 $(".bigImage").attr("src","images/ADFront.png");
+
+				});
+
+			    $(".smallPic2").click(function() {
+			         $(".bigImage").attr("src","images/ADSide.png");
+
+			    });
+
+			    $(".smallPic3").click(function() {
+			         $(".bigImage").attr("src","images/ADback.png");
+
+			    });
+
+			    $(".smallPic4").click(function() {
+			         $(".bigImage").attr("src","images/ADTop.png");
+
+			    });
+
+			    // hiding or showing other address
+			    $("#shippingSelect").change(function() {
+			    	if ( $(this).val() == "same" ) {
+			    		$("#otherAddress").hide();
+			    	}
+
+			    	if ( $(this).val() == "other" ) {
+			    		$("#otherAddress").show();
+			    	}
+			    });
+						
+			});
+		</script>
 	</body>
 	</html>
