@@ -52,6 +52,7 @@
 		.weightNormal{font-weight: normal !important;}
 		.marright30{margin-right: 30px;}
 		.sectionHr{border: 0; border-bottom: 1px solid #979797; width: 100%;}
+		.nomargbot{margin-bottom: 0 !important;}
 
 		.productDiv{border: 1px solid #004E80;}
 		.titleDiv{background: #F8F8F8;  padding: 15px 25px;}
@@ -122,12 +123,19 @@
 		#otherAddress{display: none;}
 		.ccGroup{max-width: 330px; margin-bottom: 10px;}
 		.formPay{display: inline-block; color: #004E80; font-size: 18px; font-weight: bold; vertical-align: middle;}
+		.codeLink{font-size: 13px; margin-bottom: 20px; display: inline-block;}
+		.codeLink:hover{color: #4898f5}
+		.paypalButt{max-width: 320px; margin-top: 30px;}
+		.submitButton{background-color: #199AFC; color: #ffffff; text-align: center; box-shadow: 0 0 10px 0 rgba(0,0,0,0.5); 
+					  border-radius: 5px; padding: 10px 0; width: 100%; font-size: 22px; margin: 5px auto 10px; cursor: pointer;}
+		.submitButton:hover{opacity: .8;}
 
 		/* ipad and mobile styling rules */
-		@media only screen and (max-width: 1099px) {
+		@media only screen and (max-width: 1024px) {
 			.container{width: auto;}
 			.desktopHide{display: block;}
 			.Fright, .Fleft{float: none;}
+			.flex-container{display: block;}
 			
 		}
 		
@@ -154,7 +162,7 @@
 				</div>
 				<div class="downTriangle"></div>
 				<div class="flex-container">
-					<div class="unitDiv flex-container">
+					<div class="unitDiv Constantflex">
 						<div class="thumbDiv">
 							<div class="smallIMG smallPic1">
 								<img src="images/ADFront.png" alt="">
@@ -211,7 +219,7 @@
 						<p class="retail">$180.00 retail value</p>
 						<p class="descText">One-year combo pack includes one (1) UltraHEPA™ filter and two (2) Carbon/Gas Trap/VOC filters.</p>
 					</div>
-					<div class="unitDiv flex-container">
+					<div class="unitDiv Constantflex">
 						<div class="flex1 marright30">
 							<div class="purOption">
 								<div class="titlePur">
@@ -534,26 +542,27 @@
 								<div class="marbot30">
 									<div class="circle"> <div class="innerCircle"></div> </div> <p class="formPay">PAY BY CREDIT CARD</p>
 								</div>
-								<p class="formTitle">Last Name</p>
+								<p class="formTitle">Credit Card</p>
 								<input type="text">
-								<p class="formTitle">Phone</p>
-								<input type="text">
-								<p class="formTitle">Street Address</p>
-								<input type="text">
-								<p class="formTitle">Apt/Suite</p>
-								<input type="text">
-								<p class="formTitle">City</p>
-								<input type="text">
+								<p class="formTitle">Security Code</p>
+								<input type="text" class="nomargbot">
+								<a href="https://www.cvvnumber.com/cvv.html" class="codeLink"><i>What is my security code?</i></a>
 								<div class="Constantflex">
 									<div class="flex1 smallInputRight">
-										<p class="formTitle">State</p>
+										<p class="formTitle">Exp. Month</p>
 										<select name="" id="" class="formSelect"></select>
 									</div>
 									<div class="flex1">
-										<p class="formTitle">Postal Code</p>
+										<p class="formTitle">Exp. Year</p>
 										<input type="text" class="postalWidth">
 									</div>
 								</div>
+								<img src="images/paypalButt.png" alt="" class="paypalButt">
+								<div class="marbot30 martop12">
+									<div class="circle"> <div class="innerCircle"></div> </div> <p class="formPay">CHECKOUT WITH PAYPAL</p>
+								</div>
+								<button type="submit" form="" value="Submit" class="submitButton">SUBMIT ORDER</button>
+								<p class="font20">By pressing this button you agree to the terms and conditions of this sale.</p>
 						</div>
 						</div>
 					</div>
