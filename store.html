@@ -7,8 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 	<title>AirDoctor home indoor purifier for allergy, smoke & germs | Store</title>
-<!-- 	<link rel="stylesheet" href="css/style.css">
- -->	<style>
+	<style>
 		*{text-decoration: none; margin: 0; padding: 0; max-width: 100%;}
 		html,body{margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; color: #000000; font-size: 16px;}
 		img{border: none;}
@@ -112,7 +111,7 @@
 		#infoSection{display: flex;}
 		.formTitle{color: #555555; margin-bottom: 3px;}
 		input, .formSelect{border: 1px solid #000000; padding: 5px 10px; font-size: 20px; width: 90%; margin-bottom: 20px;}
-		.box{height: 25px; width: 25px; border: 2px solid #004E80; float: left; margin-right: 10px;}
+		.box{height: 25px; width: 25px; border: 2px solid #004E80; float: left; margin-right: 10px; padding-left: 2px; padding-top: 1px;}
 		.sign{color: #004E80; font-size: 18px; font-weight: bold; float: right; max-width: 90%;}
 		.smallInputRight{margin-right: 20px;}
 		.formSelect{height: 35px;}
@@ -133,15 +132,39 @@
 		/* ipad and mobile styling rules */
 		@media only screen and (max-width: 1024px) {
 			.container{width: auto;}
-			.desktopHide{display: block;}
+			.desktopHide, .flex-container{display: block;}
 			.Fright, .Fleft{float: none;}
-			.flex-container{display: block;}
-			
+			.bigIMGDiv{max-width: none; margin: -15px auto 0;}
+			.contPad{padding: 60px 15px;}
+			.comboDiv{max-width: none;}
+			.titleDiv p{font-size: 24px;}
+			.downTriangle, .downBlueTri{display: none;}
+			.titleDiv{margin-bottom: 20px;}	
+			.TabletSmallSelect{width: 72% !important;}
+			.TabletOnly1{margin-top: 44px;}
+			.TabletAuto{margin: auto;}
+			.rightInfo{display: block; flex: 1;}
 		}
 		
 		/* mobile ONLY styling rules */
 		@media only screen and (max-width: 736px) {
-		
+			.font36{font-size: 30px;}
+			.contPad{padding: 40px 15px;}
+			.Constantflex, #infoSection{display: block;}
+			.specialFlexMobile{display: flex; flex-direction: column;}
+			.thumbDiv{order: 2; margin: 20px auto 0; display: flex;}
+			.bigIMGDiv{padding: 0; margin-top: 0; max-width: 260px; height: 370px;}
+			.smallIMG{display: inline-block; max-width: 62px; margin-right: 10px; padding: 10px; height: 75px;}
+			.MobileNoMarg{margin: 0; padding-top: 25px;}
+			.quantityDiv select{width: 70%;}
+			.font18{font-size: 16px !important;}
+			.unitDiv{padding: 5px 10px 15px;}
+			.marright30{margin-bottom: 30px; margin-right: 0;}
+			.purOption .lastOnly, .carbonCart{margin: 0;}
+			.summaryRow{font-size: 17px;}
+			.font28{font-size: 24px;}
+			.leftInfo{margin-right: 0;}
+
 		}
 		
 		/* mobile LANDSCAPE ONLY styling rules */
@@ -162,7 +185,7 @@
 				</div>
 				<div class="downTriangle"></div>
 				<div class="flex-container">
-					<div class="unitDiv Constantflex">
+					<div class="unitDiv Constantflex specialFlexMobile">
 						<div class="thumbDiv">
 							<div class="smallIMG smallPic1">
 								<img src="images/ADFront.png" alt="">
@@ -173,7 +196,7 @@
 							<div class="smallIMG smallPic3">
 								<img src="images/ADback.png" alt="">
 							</div>
-							<div class="smallIMG smallPic4">
+							<div class="smallIMG smallPic4 MobileNoMarg">
 								<img src="images/ADTop.png" alt="">
 							</div>
 						</div>
@@ -284,7 +307,7 @@
 					</div>
 				</div>
 			</div> <!-- productDiv -->
-			<div class="flex-container">
+			<div class="Constantflex marbot30">
 				<div class="productDiv flex1 marright30">
 					<div class="titleDiv">
 					<p>AirDoctor Replacement Filters - Two Year Combo Pack</p>
@@ -295,7 +318,7 @@
 						<img src="images/TwoYearCombo.png" alt="">
 					</div>
 					<p>Two-year combo pack includes two (2) UltraHEPA™ filters and four (4) Carbon/Gas Trap/VOC filters.</p>
-					<div class="onlyDiv">
+					<div class="onlyDiv TabletOnly1">
 						<img src="images/blueCheck.png" alt=""> <p>$284.95</p>
 					</div>
 					<div class="onlyDiv grayOnly">
@@ -303,7 +326,7 @@
 					</div>
 					<div class="quantityDiv">
 							<label for="">Quantity</label> 
-							<select name="" id=""> 
+							<select name="" id="" class="TabletSmallSelect"> 
 								<option value="" selected="true">0</option>
 								<option value="">1</option>
 								<option value="">2</option>
@@ -333,7 +356,7 @@
 					</div>
 					<div class="quantityDiv">
 							<label for="">Quantity</label> 
-							<select name="" id=""> 
+							<select name="" id="" class="TabletSmallSelect"> 
 								<option value="" selected="true">0</option>
 								<option value="">1</option>
 								<option value="">2</option>
@@ -346,9 +369,6 @@
 				</div>
 				</div> <!-- productDiv -->
 				</div> <!-- flex-container -->
-			</div> <!-- container -->
-			<hr class="sectionHr">
-			<div class="container contPad">
 			<div class="flex-container">
 				<div class="productDiv flex1 marright30">
 					<div class="titleDiv">
@@ -415,7 +435,7 @@
 		<hr class="sectionHr">
 		<div class="container contPadSmall">
 			<h2 class="font36 bold center marbot60">AirDoctor Compact Filters</h2>
-				<div class="productDiv max525">
+				<div class="productDiv max525 TabletAuto">
 					<div class="titleDiv">
 					<p>AirDoctor Compact Filter Set</p>
 				</div>
@@ -440,7 +460,7 @@
 								<option value="">3</option>
 							</select>
 					</div>
-					<div class="addToCart heppaCart">
+					<div class="addToCart">
 						<div class="circle"> <div class="innerCircle"></div> </div> <p>ADD TO CART</p>
 					</div>
 				</div>
@@ -477,7 +497,7 @@
 						<p class="formTitle">Last Name</p>
 						<input type="text">
 						<div class="marbot20">
-							<div class="box"></div>
+							<div class="box"><img src="images/blueCheck.png" alt=""></div>
 							<p class="sign">Yes, sign me up to receive news about sales &amp; offers! Read our privacy policy.</p>
 							<div class="clear"></div>
 						</div>
